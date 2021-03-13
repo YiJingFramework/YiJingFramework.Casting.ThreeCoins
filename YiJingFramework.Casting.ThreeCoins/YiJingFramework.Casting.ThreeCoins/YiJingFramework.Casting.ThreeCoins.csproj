@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>yueyinqiu5990</Authors>
+    <Description>YiJingFramework is a C# library (group) about Yi Jing.</Description>
+    <Copyright>Copyright © 2021 yueyinqiu5990. All rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/yueyinqiu/YiJingFramework.Casting.ThreeCoins/wiki</PackageProjectUrl>
+    <PackageIcon>Taichi.png</PackageIcon>
+    <RepositoryUrl>https://github.com/yueyinqiu/YiJingFramework.Casting.ThreeCoins.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>zhouyi;i-ching;yijing;yijingframework</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>obj\Release\net5.0\YiJingFramework.Casting.ThreeCoins.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YiJingFramework.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Taichi.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
