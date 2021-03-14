@@ -31,6 +31,10 @@ namespace YiJingFramework.Casting.ThreeCoins
         /// 指示是否为变爻。
         /// Whether the line is a changing line or not.
         /// </param>
+        /// <exception cref="Core.Exceptions.UnexpectedLineAttributeException">
+        /// <paramref name="attribute"/> 不是阴也不是阳。
+        /// <paramref name="attribute"/> is neither yin nor yang.
+        /// </exception>
         public void Draw(Core.LineAttribute attribute, bool isChanging)
         {
             if (attribute == Core.LineAttribute.Yang)

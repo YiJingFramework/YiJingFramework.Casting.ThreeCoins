@@ -13,6 +13,10 @@ namespace YiJingFramework.Casting.ThreeCoins
         /// 用来记录爻的纸。
         /// The paper to record the lines.
         /// </summary>
+        /// <exception cref="ArgumentNullException">
+        /// 要设置的值是 <c>null</c> 。
+        /// The value to set is <c>null</c>.
+        /// </exception>
         public IPaper Paper
         {
             get => this.paper;
