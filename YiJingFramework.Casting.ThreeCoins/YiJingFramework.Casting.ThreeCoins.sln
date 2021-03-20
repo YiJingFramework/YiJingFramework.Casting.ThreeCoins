@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiJingFramework.Casting.ThreeCoins", "YiJingFramework.Casting.ThreeCoins\YiJingFramework.Casting.ThreeCoins.csproj", "{F239250F-3BE5-4B36-93D3-B7447A895BBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YiJingFramework.Casting.ThreeCoins", "YiJingFramework.Casting.ThreeCoins\YiJingFramework.Casting.ThreeCoins.csproj", "{F239250F-3BE5-4B36-93D3-B7447A895BBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiJingFramework.Casting.ThreeCoinsTests", "YiJingFramework.Casting.ThreeCoinsTests\YiJingFramework.Casting.ThreeCoinsTests.csproj", "{163DF1DA-9CC3-4B3A-9372-C79E9AB1CEA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YiJingFramework.Casting.ThreeCoinsTests", "YiJingFramework.Casting.ThreeCoinsTests\YiJingFramework.Casting.ThreeCoinsTests.csproj", "{163DF1DA-9CC3-4B3A-9372-C79E9AB1CEA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{54CFC5BD-151E-485D-B158-70469CDD2EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintingCasting", "PaintingCasting\PaintingCasting.csproj", "{6A9B3A58-54DB-4ECC-91DC-A39D57FDD258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coins", "Coins\Coins.csproj", "{06CF56D7-8BE3-489D-92AA-496465497A90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papers", "Papers\Papers.csproj", "{61A51ABB-C56A-473C-838C-05C162A3519A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +29,26 @@ Global
 		{163DF1DA-9CC3-4B3A-9372-C79E9AB1CEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163DF1DA-9CC3-4B3A-9372-C79E9AB1CEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163DF1DA-9CC3-4B3A-9372-C79E9AB1CEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9B3A58-54DB-4ECC-91DC-A39D57FDD258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9B3A58-54DB-4ECC-91DC-A39D57FDD258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9B3A58-54DB-4ECC-91DC-A39D57FDD258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9B3A58-54DB-4ECC-91DC-A39D57FDD258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CF56D7-8BE3-489D-92AA-496465497A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CF56D7-8BE3-489D-92AA-496465497A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CF56D7-8BE3-489D-92AA-496465497A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CF56D7-8BE3-489D-92AA-496465497A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A51ABB-C56A-473C-838C-05C162A3519A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A51ABB-C56A-473C-838C-05C162A3519A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A51ABB-C56A-473C-838C-05C162A3519A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A51ABB-C56A-473C-838C-05C162A3519A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A9B3A58-54DB-4ECC-91DC-A39D57FDD258} = {54CFC5BD-151E-485D-B158-70469CDD2EF9}
+		{06CF56D7-8BE3-489D-92AA-496465497A90} = {54CFC5BD-151E-485D-B158-70469CDD2EF9}
+		{61A51ABB-C56A-473C-838C-05C162A3519A} = {54CFC5BD-151E-485D-B158-70469CDD2EF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {708571F5-E645-4698-A7D2-BFF1B695A32F}
