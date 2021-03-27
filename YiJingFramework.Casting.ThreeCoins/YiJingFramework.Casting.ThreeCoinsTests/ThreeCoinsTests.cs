@@ -75,5 +75,20 @@ namespace YiJingFramework.Casting.ThreeCoins.Tests
             Assert.AreEqual(100, p.GetPaintings().Original.Count);
             Assert.AreEqual(100, p.GetPaintings().Changed.Count);
         }
+
+        [TestMethod()]
+        public void CheckAndDrawTest()
+        {
+            var tc = new ThreeCoins(new Paper());
+            tc.TossAndDraw();
+            for (int i = 0; i < 100; i++)
+                tc.CheckAndDraw();
+            var o1 = tc.Paper.GetPaintings().Original[0];
+            foreach (var line in tc.Paper.GetPaintings().Original)
+                Assert.AreEqual(o1, line);
+            var o2 = tc.Paper.GetPaintings().Changed[0];
+            foreach (var line in tc.Paper.GetPaintings().Changed)
+                Assert.AreEqual(o2, line);
+        }
     }
 }
