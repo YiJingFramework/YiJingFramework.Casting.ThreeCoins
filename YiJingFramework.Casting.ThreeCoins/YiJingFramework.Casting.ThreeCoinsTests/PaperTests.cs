@@ -17,17 +17,17 @@ namespace YiJingFramework.Casting.ThreeCoins.Tests
             var random = new Random();
             for (int i = 0; i < 200; i++)
             {
-                var list = new List<Core.LineAttribute>();
-                var list2 = new List<Core.LineAttribute>();
+                var list = new List<Core.YinYang>();
+                var list2 = new List<Core.YinYang>();
                 var paper = new Paper();
                 for (int j = 0; j < 20; j++)
                 {
                     var o = Convert.ToBoolean(random.Next(0, 2));
-                    var p = (Core.LineAttribute)(random.Next(0, 2));
+                    var p = (Core.YinYang)(random.Next(0, 2));
                     list.Add(p);
                     if (o)
                     {
-                        list2.Add((Core.LineAttribute)Convert.ToInt32(!Convert.ToBoolean(p)));
+                        list2.Add(!p);
                     }
                     else
                         list2.Add(p);

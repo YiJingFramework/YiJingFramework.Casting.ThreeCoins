@@ -20,7 +20,7 @@ namespace YiJingFramework.Casting.ThreeCoins
         /// 指示是否为变爻。
         /// Whether the line is a changing line or not.
         /// </param>
-        void Draw(LineAttribute attribute, bool isChanging);
+        void Draw(YinYang attribute, bool isChanging);
 
         /// <summary>
         /// 获取卦画。

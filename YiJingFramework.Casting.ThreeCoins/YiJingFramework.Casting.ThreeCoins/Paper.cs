@@ -14,8 +14,8 @@ namespace YiJingFramework.Casting.ThreeCoins
     /// </summary>
     public sealed class Paper : IPaper
     {
-        private readonly List<Core.LineAttribute> original = new List<Core.LineAttribute>(6);
-        private readonly List<Core.LineAttribute> changed = new List<Core.LineAttribute>(6);
+        private readonly List<Core.YinYang> original = new List<Core.YinYang>(6);
+        private readonly List<Core.YinYang> changed = new List<Core.YinYang>(6);
 
         private readonly object locker = new object();
 
@@ -31,30 +31,13 @@ namespace YiJingFramework.Casting.ThreeCoins
         /// 指示是否为变爻。
         /// Whether the line is a changing line or not.
         /// </param>
-        /// <exception cref="Core.Exceptions.UnexpectedLineAttributeException">
-        /// <paramref name="attribute"/> 不是阴也不是阳。
-        /// <paramref name="attribute"/> is neither yin nor yang.
-        /// </exception>
-        public void Draw(Core.LineAttribute attribute, bool isChanging)
+        public void Draw(Core.YinYang attribute, bool isChanging)
         {
-            if (attribute == Core.LineAttribute.Yang)
+            lock (this.locker)
             {
-                lock (this.locker)
-                {
-                    this.original.Add(Core.LineAttribute.Yang);
-                    this.changed.Add(isChanging ? Core.LineAttribute.Yin : Core.LineAttribute.Yang);
-                }
+                this.original.Add(attribute);
+                this.changed.Add(isChanging ? !attribute : attribute);
             }
-            else if (attribute == Core.LineAttribute.Yin)
-            {
-                lock (this.locker)
-                {
-                    this.original.Add(Core.LineAttribute.Yin);
-                    this.changed.Add(isChanging ? Core.LineAttribute.Yang : Core.LineAttribute.Yin);
-                }
-            }
-            else
-                throw new Core.Exceptions.UnexpectedLineAttributeException(attribute);
         }
 
         /// <summary>

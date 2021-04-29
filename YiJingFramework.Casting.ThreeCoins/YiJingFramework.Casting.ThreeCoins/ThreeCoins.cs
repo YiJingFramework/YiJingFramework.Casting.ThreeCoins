@@ -76,10 +76,10 @@ namespace YiJingFramework.Casting.ThreeCoins
             num += this.Coin3.Toss() ? 3 : 2;
 
             var (attribute, isChanging) = num switch {
-                6 => (Core.LineAttribute.Yin, true),
-                7 => (Core.LineAttribute.Yang, false),
-                8 => (Core.LineAttribute.Yin, false),
-                _ => (Core.LineAttribute.Yang, true) // 9
+                6 => (Core.YinYang.Yin, true),
+                7 => (Core.YinYang.Yang, false),
+                8 => (Core.YinYang.Yin, false),
+                _ => (Core.YinYang.Yang, true) // 9
             };
             this.Paper?.Draw(attribute, isChanging);
         }
@@ -96,10 +96,10 @@ namespace YiJingFramework.Casting.ThreeCoins
             num += this.Coin3.IsYangSideUp ? 3 : 2;
 
             var (attribute, isChanging) = num switch {
-                6 => (Core.LineAttribute.Yin, true),
-                7 => (Core.LineAttribute.Yang, false),
-                8 => (Core.LineAttribute.Yin, false),
-                _ => (Core.LineAttribute.Yang, true) // 9
+                6 => (Core.YinYang.Yin, true),
+                7 => (Core.YinYang.Yang, false),
+                8 => (Core.YinYang.Yin, false),
+                _ => (Core.YinYang.Yang, true) // 9
             };
             this.Paper?.Draw(attribute, isChanging);
         }

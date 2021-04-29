@@ -17,41 +17,41 @@ namespace YiJingFramework.Casting.ThreeCoins.Tests
             internal Coin Coin1 { get; init; }
             internal Coin Coin2 { get; init; }
             internal Coin Coin3 { get; init; }
-            public void Draw(LineAttribute attribute, bool isChanging)
+            public void Draw(YinYang attribute, bool isChanging)
             {
                 if (this.Coin1.IsYangSideUp && this.Coin2.IsYangSideUp && this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yang, attribute);
+                    Assert.AreEqual(YinYang.Yang, attribute);
                     Assert.AreEqual(true, isChanging);
                 }
                 if (this.Coin1.IsYangSideUp && this.Coin2.IsYangSideUp && !this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yin, attribute);
+                    Assert.AreEqual(YinYang.Yin, attribute);
                     Assert.AreEqual(false, isChanging);
                 }
                 if (this.Coin1.IsYangSideUp && !this.Coin2.IsYangSideUp && this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yin, attribute);
+                    Assert.AreEqual(YinYang.Yin, attribute);
                     Assert.AreEqual(false, isChanging);
                 }
                 if (this.Coin1.IsYangSideUp && !this.Coin2.IsYangSideUp && !this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yang, attribute);
+                    Assert.AreEqual(YinYang.Yang, attribute);
                     Assert.AreEqual(false, isChanging);
                 }
                 if (!this.Coin1.IsYangSideUp && this.Coin2.IsYangSideUp && this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yin, attribute);
+                    Assert.AreEqual(YinYang.Yin, attribute);
                     Assert.AreEqual(false, isChanging);
                 }
                 if (!this.Coin1.IsYangSideUp && this.Coin2.IsYangSideUp && !this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yang, attribute);
+                    Assert.AreEqual(YinYang.Yang, attribute);
                     Assert.AreEqual(false, isChanging);
                 }
                 if (!this.Coin1.IsYangSideUp && !this.Coin2.IsYangSideUp && !this.Coin3.IsYangSideUp)
                 {
-                    Assert.AreEqual(LineAttribute.Yin, attribute);
+                    Assert.AreEqual(YinYang.Yin, attribute);
                     Assert.AreEqual(true, isChanging);
                 }
             }
